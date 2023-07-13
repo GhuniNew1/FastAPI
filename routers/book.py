@@ -9,26 +9,10 @@ router = APIRouter(
 
 book_db = [
     {
-        "title":"The C Programming",
-        "price": 720,
+        "title":"test1",
+        "price": 100,
         "id": 0
-    },
-    {
-        "title":"Learn Python the Hard Way",
-        "price": 870
-    },
-    {
-        "title":"JavaScript: The Definitive Guide",
-        "price": 1369
-    },
-    {
-        "title":"Python for Data Analysis",
-        "price": 1394
-    },
-    {
-        "title":"Clean Code",
-        "price": 1500
-    },
+    }
 ]
 
 class Book(BaseModel):
@@ -36,7 +20,7 @@ class Book(BaseModel):
     price: float
     book_id: int
 
-@router.get("/")
+@router.get("")
 async def get_books():
     return book_db
 
